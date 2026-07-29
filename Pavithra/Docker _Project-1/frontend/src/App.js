@@ -4,7 +4,7 @@ import "./App.css";
 import TaglineSection from "./TaglineSection";
 
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_BASE_URL || "http://localhost:8000",
+  baseURL: process.env.REACT_APP_API_BASE_URL || "http://15.252.123.236:8000",
 });
 
 function App() {
