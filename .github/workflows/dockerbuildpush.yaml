@@ -20,7 +20,7 @@ jobs:
         run: |
           pwd
           ls -la
-          test -f Dockerfile && echo "Dockerfile found" || echo "Dockerfile NOT found"
+          ls -la Dockerfile
 
       # ── Set up Docker Buildx ────────────────────────────────────
       # Buildx is an extended Docker build tool with better caching
