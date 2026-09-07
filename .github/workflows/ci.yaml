@@ -5,7 +5,7 @@ on:
     branches: [main]                  # only on pushes to main...
     paths:
       - "fastapi-demo/**"             # ...that change the app (or this workflow)
-      - ".github/workflows/ci.yml"
+      - ".github/workflows/ci.yaml"
   pull_request:
     branches: [main]                  # and on PRs targeting main (the pre-merge gate)
     paths:
