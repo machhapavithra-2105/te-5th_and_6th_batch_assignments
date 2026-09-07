@@ -55,7 +55,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: .               # build context (where Dockerfile is)
+          context: ./fastapi-demo
+          file: ./fastapi-demo/Dockerfile
           push: true               # actually push (set false to just build)
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
