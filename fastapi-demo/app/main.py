@@ -3,7 +3,7 @@ A tiny FastAPI service for the CI/CD class demo.
 
 Deliberately small so the focus stays on the PIPELINE, not the app.
   GET /         -> JSON greeting (what a user hits)
-  GET /health   -> JSON health check (what Kubernetes probes and smoke tests hit)
+  GET /health   -> JSON health check (used by Kubernetes and smoke tests)
 """
 import os
 
