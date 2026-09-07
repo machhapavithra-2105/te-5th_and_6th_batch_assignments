@@ -17,10 +17,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Verify Dockerfile
-        run: |
-          pwd
-          ls -la
-          ls -la Dockerfile
+        
 
       # ── Set up Docker Buildx ────────────────────────────────────
       # Buildx is an extended Docker build tool with better caching
