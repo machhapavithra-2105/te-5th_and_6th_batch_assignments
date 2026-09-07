@@ -11,8 +11,9 @@ from fastapi import FastAPI
 
 app = FastAPI(title="CI/CD Demo")
 
-# The version is read from an environment variable so a deployment can PROVE that a
-# new version actually shipped. The CD pipeline sets APP_VERSION to the commit SHA.
+# The version is read from an environment variable so a deployment can PROVE
+# that a new version actually shipped. The CD pipeline sets APP_VERSION to
+# the commit SHA.
 APP_VERSION = os.getenv("APP_VERSION", "dev")
 
 
@@ -23,5 +24,6 @@ def home():
 
 @app.get("/health")
 def health():
-    # A readiness/liveness endpoint. Returning 200 means "I am alive and ready".
+    # A readiness/liveness endpoint. Returning 200 means
+    # "I am alive and ready".
     return {"status": "ok", "version": APP_VERSION}
