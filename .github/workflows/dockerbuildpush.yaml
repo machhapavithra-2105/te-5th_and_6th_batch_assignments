@@ -16,6 +16,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+      - name: Verify Dockerfile
+        run: |
+          pwd
+          ls -la
+          test -f Dockerfile && echo "Dockerfile found" || echo "Dockerfile NOT found"
 
       # ── Set up Docker Buildx ────────────────────────────────────
       # Buildx is an extended Docker build tool with better caching
